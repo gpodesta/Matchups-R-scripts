@@ -1,0 +1,70 @@
+# -----------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------
+# Configuration file for MODIS R scripts (Version 7)  
+# -----------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------------
+# Sensor being analyzed ("Aqua" or "Terra")
+# -----------------------------------------------------------------------------------
+
+sensor  :  "Aqua"		# MODIS sensor to be analyzed
+
+# -----------------------------------------------------------------------------------
+# Version of matchups' calibration collection
+# -----------------------------------------------------------------------------------
+
+collection  :  6
+
+# -----------------------------------------------------------------------------------
+# Information about matchups
+# -----------------------------------------------------------------------------------
+
+matchups  :
+  format   :  "OLD"
+  version  :  "collection_6"
+
+# -----------------------------------------------------------------------------------
+# Information about geophysical variable being estimated, and algorithm details
+# -----------------------------------------------------------------------------------
+
+geophys.var  :  "SST" 		 	# Geophysical variable estimated can be "SST" or "SST4"
+
+algorithm  :
+  type  :  "latband1" 						# SST algorithm type
+  version.name  :  "version_7"		# SST algorithm version
+  coefficients.version  :  "7.0"	# Version for algorithm coefficients
+
+# -----------------------------------------------------------------------------------
+# Directory where input matchups are located
+# -----------------------------------------------------------------------------------
+
+matchups.indir  :  "D:/Matchup_files/MODIS/"
+
+# -----------------------------------------------------------------------------------
+# Base directory for results 
+# -----------------------------------------------------------------------------------
+
+results.dir   :  "D:/Matchups/MODIS/results/" 		# Directory for results
+
+# -----------------------------------------------------------------------------------
+# Directory where ancillary geographic information is located 
+# -----------------------------------------------------------------------------------
+
+geo.dir  :  "D:/ENSO-Data/Other Data/Natural Earth/"  # Used to fetch ocean basin names
+
+# -----------------------------------------------------------------------------------
+# Define if ALL variables in input matchup records will be kept, or a subset is extracted
+# -----------------------------------------------------------------------------------
+
+keep.all.vars  :  FALSE 		# If TRUE, keep all variables in input file
+
+# -----------------------------------------------------------------------------------
+# Define boundary between regimes of BT difference for channels in 11um range
+# -----------------------------------------------------------------------------------
+
+MODIS.BTdiff.threshold  :  0.7	# In deg C
+
+
+
+
